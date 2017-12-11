@@ -1,38 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>svideo</title>
-    <link rel="stylesheet" href="/public/style.css" />
+  <meta charset="UTF-8">
+  <title>svideo</title>
+  <link rel="stylesheet" href="public/style.css">
 </head>
+
 <body>
-    <div id="app"></div>
-    <!-- <div id="app"><%= body %></div> -->
-    <!-- <script src="/public/bundle.js"></script> -->
-    <script src="node_modules/react/dist/react.js"></script>
-    <script src="node_modules/react-dom/dist/react-dom.js"></script>
-    <script>
-        const ce = React.createElement
-
-        const TvShow = function (props) {
-            return (
-                ce('p', {style: {color: props.color}}, props.name)
-            )
-        }
-
-        const MyFirstComponent = function () {
-            return ce('div', { id: 'my-first-compnent'},
-                ce(TvShow, {name: 'Game of Thrones', color: 'YellowGreen'}),
-                ce(TvShow, {name: 'Rick and Morty', color: 'GreenYellow'}),
-                ce(TvShow, {name: 'Mr Robot', color: 'LimeGreen'}),
-                ce(TvShow, {name: 'Stranger Things', color: 'peru'})
-            )
-        }
-
-        ReactDOM.render(
-            ce(MyFirstComponent),
-            document.getElementById('app')
-        )
-    </script>
+  <div id="app"></div>
+  <script src="public/bundle.js"></script>
 </body>
+
 </html>
