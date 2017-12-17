@@ -1,6 +1,11 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import ShowCard from "./ShowCard";
+import preload from "../data.json";
 
-const Search = () => <h1>This is a search</h1>;
+const Search = () => (
+  <div className="search">
+    {preload.shows.map(show => <ShowCard key={show.imdbID} {...show} />)}
+  </div>
+);
 
 export default Search;
