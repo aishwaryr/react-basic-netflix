@@ -1,25 +1,23 @@
 import React from "react";
 import { render } from "react-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Landing from "./Landing";
+import Search from "./Search";
+import Data from "./Data";
 
-const TvShow = function(props) {
-  //   return ce("p", { style: { color: props.color } }, props.name);
-  const style = { color: props.color };
-  return (
-    <div>
-      <h1 style={style}>{props.name}</h1>
+const FourOhFour = () => <h1>404</h1>;
+
+const App = () => (
+  <BrowserRouter>
+    <div className="app">
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route path="/search" component={Search} />
+        <Route path="/data" component={Data} />
+        <Route component={FourOhFour} />
+      </Switch>
     </div>
-  );
-};
+  </BrowserRouter>
+);
 
-const MyFirstComponent = function() {
-  return (
-    <div id="my-first-component">
-      <TvShow name="Game of Thrones" color="YellowGreen" />
-      <TvShow name="Rick and Morty" color="GreenYellow" />
-      <TvShow name="Mr Robot" color="peru" />
-      <TvShow name="Stranger Things" color="LimeGreen" />
-    </div>
-  );
-};
-
-render(<MyFirstComponent />, document.getElementById("app"));
+render(<App />, document.getElementById("app"));
