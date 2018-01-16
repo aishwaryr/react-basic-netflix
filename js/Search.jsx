@@ -9,9 +9,9 @@ class Search extends Component {
     searchTerm: ""
   };
   componentWillMount() {
-    const currentPath = window.location.pathname;
+    const currentPath: string = window.location.pathname;
     if (currentPath.length > 7) {
-      const searchInput = currentPath.substr(8);
+      const searchInput: string = currentPath.substr(8);
       this.setState({ searchTerm: searchInput });
     }
   }
