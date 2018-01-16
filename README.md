@@ -1,1 +1,1 @@
-# React Basic Netflix App
+# React Basic Netflix App using Redux and Flow
