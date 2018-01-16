@@ -8,13 +8,6 @@ class Search extends Component {
   state = {
     searchTerm: ""
   };
-  componentWillMount() {
-    const currentPath: string = window.location.pathname;
-    if (currentPath.length > 7) {
-      const searchInput: string = currentPath.substr(8);
-      this.setState({ searchTerm: searchInput });
-    }
-  }
   props: {
     shows: Array<Show>
   };
