@@ -34,6 +34,7 @@ class Landing extends Component {
   }
 }
 
+// Return value of both funcs below are passed as props to above Comp due to the connect line at the end
 const mapStateToProps = state => ({
   searchTerm: state.searchTerm
 });

@@ -21,6 +21,7 @@ const Search = (props: { searchTerm: string, shows: Array<Show> }) => (
   </div>
 );
 
+// whatever this func returns becomes the props of Search
 const mapStateToProps = state => ({
   searchTerm: state.searchTerm
 });
