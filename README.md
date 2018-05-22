@@ -10,4 +10,16 @@
 
 Screenshots
 
+Landing Page
+
 <img src="screens/landing.png">
+
+Search Page
+
+<img src="screens/search.png">
+
+<img src="screens/search_black.png">
+
+Details Page
+
+<img src="screens/details.png">
