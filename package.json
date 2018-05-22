@@ -1,7 +1,7 @@
 {
   "scripts": {
     "api": "node ratingsAPI.js",
-    "build": "webpack -p",
+    "build": "NODE_ENV=production webpack -p",
     "dev": "webpack-dev-server",
     "format": "prettier --list-different --single-quote --print-width=120 webpack.config.js \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
@@ -12,7 +12,9 @@
     "watch": "webpack --watch"
   },
   "jest": {
-    "snapshotSerializers": ["jest-serializer-enzyme"]
+    "snapshotSerializers": [
+      "jest-serializer-enzyme"
+    ]
   },
   "dependencies": {
     "axios": "0.16.1",
@@ -61,6 +63,7 @@
     "eslint-plugin-prettier": "2.1.1",
     "eslint-plugin-react": "7.0.1",
     "flow-bin": "0.47.0",
+    "html-webpack-plugin": "^3.2.0",
     "jest": "20.0.4",
     "jest-serializer-enzyme": "1.0.0",
     "moxios": "0.4.0",
