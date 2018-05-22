@@ -1,7 +1,7 @@
 // @flow
 
 import { combineReducers } from "redux";
-import { SET_SEARCH_TERM } from "./actions";
+import { SET_SEARCH_TERM, ADD_API_DATA } from "./actions";
 
 // const DEFAULT_STATE = {
 //   searchTerm: ""
@@ -10,9 +10,18 @@ import { SET_SEARCH_TERM } from "./actions";
 // Object.assign({}, src) copies all own properties from src obj to target obj
 // We're making a new copy of state because reducer must always return a new state obj
 
-const setSearchTerm = (state = "", action: Action) => {
+const searchTerm = (state = "", action: Action) => {
   if (action.type === SET_SEARCH_TERM) {
     return action.payload;
+  }
+  return state;
+};
+
+const apiData = (state = {}, action: Action) => {
+  if (action.type === ADD_API_DATA) {
+    return Object.assign({}, state, {
+      [action.payload.imdbID]: action.payload
+    });
   }
   return state;
 };
@@ -32,6 +41,9 @@ const setSearchTerm = (state = "", action: Action) => {
 // };
 
 // below combineReducers({}) means that the piece of state called searchTerm is taken care by reducer called setSearchTerm
-const rootReducer = combineReducers({ searchTerm: setSearchTerm });
+const rootReducer = combineReducers({
+  searchTerm,
+  apiData
+});
 
 export default rootReducer;
