@@ -7,3 +7,7 @@
 ## To start dev server: _yarn dev_
 
 ## Run _yarn api_ in seperate terminal to run Ratings Api
+
+Screenshots
+
+<img src="screens/landing.png">
