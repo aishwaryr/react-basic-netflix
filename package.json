@@ -5,6 +5,7 @@
     "dev": "webpack-dev-server",
     "format": "prettier --list-different --single-quote --print-width=120 webpack.config.js \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
+    "start": "NODE_ENV=server nodemon server.js",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:update": "jest -u",

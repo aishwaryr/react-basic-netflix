@@ -1,7 +1,6 @@
 {
   "presets": [
-    "react",
-    ["env", {
+    "react", ["env", {
       "targets": {
         "browsers": "last 2 versions"
       },
@@ -15,6 +14,11 @@
   ],
   "env": {
     "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    },
+    "server": {
       "plugins": [
         "transform-es2015-modules-commonjs"
       ]
